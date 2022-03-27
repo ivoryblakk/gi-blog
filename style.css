@@ -4,11 +4,50 @@
 /* The code below Clears all default styling set by the browswer (ie. chrome, edge, firefox etc) */
 
 * {
-    margin: 0;
-    padding: 0;
+  
   }
   
 @media only screen and (min-width: 801px) {
 
+  .wrapper{
+    display: grid;
+    grid-template: 'banner banner banner banner'
+                   'empty  main   main   side'
+                   'card   card   card   side'
+                   'footer footer footer footer';
+   grid-template-columns: 25% 25% 25% 25%;
+   grid-template-rows: auto;
+  }
+
+
+  .banner{
+    grid-area: banner;
+    background-color: coral;
+  }
+  
+  .empty{
+    grid-area: empty;
+    background-color: yellow;
+  }
+  
+  .main{
+    grid-area: main;
+    background-color: rgb(124, 117, 228);
+  }
+  
+  .side{
+    grid-area: side;
+    background-color: rgb(240, 0, 0);
+  }
+
+  .card{
+    grid-area: card;
+    background-color: rgb(255, 86, 255);
+  }
+
+  .footer{
+    grid-area: footer;
+    background-color: rgb(0, 255, 234);
+  }
 
 }
